@@ -1,0 +1,27 @@
+{
+  "name": "my-music-store-fall2022api",
+  "version": "1.0.0",
+  "description": "Music store API/server",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigMoneyBones/my-music-store-fall2022API.git"
+  },
+  "author": "Jesse Raines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigMoneyBones/my-music-store-fall2022API/issues"
+  },
+  "homepage": "https://github.com/BigMoneyBones/my-music-store-fall2022API#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
