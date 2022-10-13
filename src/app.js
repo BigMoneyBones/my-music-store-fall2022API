@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const userRouter = require("./routes/userRouter");
 const mongoose = require("mongoose");
+var cors = require('cors')
 
 // server port
 const port = process.env.PORT;
@@ -14,6 +15,8 @@ mongoose
   .connect(process.env.MONGO_DB_CONNECTION_STRING)
   .then(() => console.log("Connected to MONGO DB successfully"))
   .catch(() => console.log("Error connecting to MONGO DB"));
+
+  app.use(cors())
 
 // Parsing JSON to req.body
 app.use(bodyParser.json());
@@ -29,3 +32,28 @@ app.use(userRouter);
 app.listen(port, () =>
   console.log("Music store server is listening for request")
 );
+
+
+app.use(error)
+
+
+
+
+// // Error middleware
+//   // 1st arg => error
+// const errorHandler = (error, req, res, next) => {
+  
+//   if (res.headersSent) {
+//     return next(err)
+//   }
+
+//     // if(error.message === "cant connect to database"){
+//     //   // send and email to seniorDevs on team
+//     //   // wake developers to fix issue
+//     //   console.log('Error: ', error)
+//     // }
+
+//   res.status(500).send('Colossal Error')
+// }
+
+// app.use(errorHandler)
